@@ -1,40 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
-body{
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap");
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
 }
-.container{
-    background-color:#EEF9BF;
-   width: 100%;
-   height: 700px;
-   display: flex;
-  flex-direction: column;
+h1 {
+  font-family: "Roboto", sans-serif;
+  color: #75b79e;
+  font-size: 56px;
+}
+.topo {
+  width: 100%;
+  height: 143px;
+  display: flex;
+  justify-content: center;
+  background-color: #eef9bf;
+}
+
+.container {
+  width: 100%;
+  height: 980px;
+  border-radius: 10px;
+  background-color: #eef9bf;
+}
+
+.card {
+  margin-top: 155px;
+  width: 117px;
+  height: 146px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #a7e9af;
+  display: flex;
+
+  justify-content: center;
   align-items: center;
 }
-h1{
-font-family: Roboto;
-font-size: 56px;
-font-weight: 700;
-color:#75B79E
-}
-.topo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   width:100%;
-    height:150px;
- 
-    
-}
-.boxCartas{
-    width:177.2px;
-    height:326px;
-    display: flex;
-   
-
-}
-.carta{
-    background-color: #A7E9AF;
-    width: 117px;
-    height: 146px;
+.cards {
+  background-color: black;
+  display: flex;
+  justify-content: center;
 }
 
+.face {
+  margin-top: 30px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 10px;
+  transition: all 1s;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back {
+  background: url("../img/front.png") no-repeat top/contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back.flipped {
+  transform: rotateY(180deg);
+}
+
+.front {
+  transform: rotateY(-180deg);
+}
+
+.front.flipped {
+  transform: rotateY(0deg);
+}
+
+.card:hover {
+  box-shadow: 10px #aaa;
+}
+
+#wins {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #eef9bf;
+}
